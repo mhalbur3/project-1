@@ -42,6 +42,14 @@ class Ui_MainWindow(object):
         self.radioJane.setGeometry(QtCore.QRect(220, 80, 150, 30))
         self.radioJane.setObjectName("radioJane")
 
+        self.labelID = QtWidgets.QLabel(parent=self.frameVoteMenu)
+        self.labelID.setGeometry(QtCore.QRect(50, 50, 100, 20))
+        self.labelID.setObjectName("labelID")
+
+        self.inputID = QtWidgets.QLineEdit(parent=self.frameVoteMenu)
+        self.inputID.setGeometry(QtCore.QRect(150, 50, 200, 20))
+        self.inputID.setObjectName("inputID")
+
         self.buttonSubmitVote = QtWidgets.QPushButton(parent=self.frameVoteMenu)
         self.buttonSubmitVote.setGeometry(QtCore.QRect(50, 150, 130, 35))
         self.buttonSubmitVote.setObjectName("buttonSubmitVote")
@@ -61,6 +69,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
+
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -74,3 +83,5 @@ class Ui_MainWindow(object):
         self.radioJane.setText(_translate("MainWindow", "Jane"))
         self.buttonSubmitVote.setText(_translate("MainWindow", "Submit Vote"))
         self.buttonBack.setText(_translate("MainWindow", "Back"))
+        self.labelID.setText(_translate("MainWindow", "Enter Voter ID:"))
+
